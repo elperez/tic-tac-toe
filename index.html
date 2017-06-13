@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Tic-Tac-Toe</h1>
+    <h2> </h2>
+    <ul>
+      <li>Play</li>
+      <li>Settings</li>
+      <li>About</li>
+    </ul>
+  </header>
+  <main>
+    <div id="wrapper" class="wrapper">
+      <div id="content" class="content">
+        <div id='gameHeader'>
+          <span> player 1</span>
+          <span id='timer'>timer: </span>
+          
+        </div>
+        <table id='table'>
+          <tr>
+            <td onmouseout="onMouseOut(this)" data-cell=0></td>
+            <td onmouseout="onMouseOut(this)" data-cell=1></td>
+            <td onmouseout="onMouseOut(this)" data-cell=2></td>
+          </tr>
+          <tr>
+            <td onmouseout="onMouseOut(this)" data-cell=3></td>
+            <td onmouseout="onMouseOut(this)" data-cell=4></td>
+            <td onmouseout="onMouseOut(this)" data-cell=5></td>
+          </tr>
+          <tr>
+            <td onmouseout="onMouseOut(this)" data-cell=6></td>
+            <td onmouseout="onMouseOut(this)" data-cell=7></td>
+            <td onmouseout="onMouseOut(this)" data-cell=8></td>
+          </tr>                
+        </table>
+        <a href="#">Reset</a>
+      </div> 
+      <aside>
+        <div>
+          <h4>About</h4>
+          <p>This game 
+          </p>
+        </div>
+        <div>
+        <h4>Game Features</h4>
+          <ul>
+            <li>Change the Timer</li>
+            <li>Theme</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li>Home</li>
+      <li>Women's</li>
+      <li>Men's</li>
+      <li>On The Street</li>
+      <li>The Catwalk</li>
+      <li>AdWatch</li>
+      <li>About</li>
+      <li>Tips</li>
+    </ul>
+  </footer>
+</body>
+<script src="app2.js"></script>
+
+</html>
