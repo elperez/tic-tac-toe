@@ -3,13 +3,26 @@
 <head>
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Tic-Tac-Toe</h1>
+    <h1>+Tic-Tac-Toe+</h1>
     <nav>
-      <button>play</button>
-      <button>timer</button>
+      <button id="newGameButton" onmouseup="onNewGamePressed()">New Game</button>
+      <select name="timer" id="timerSelect" onchange="onTimerSelectChanged()">
+        <option value="">Timer</option>
+        <option value="0">none</option>
+        <option value="3">3 seconds</option>
+        <option value="5">5 seconds</option>
+        <option value="7">7 seconds</option>
+      </select>
+      <select name="theme" id="themeSelect" onchange="onThemeChanged()">
+        <option value="Pastels">Theme</option>
+        <option value="Pastels">Pastels</option>
+        <option value="Winter">Winter</option>
+        <option value="Halloween">Halloween</option>
+      </select>
     </nav>
   </header>
   <main>
@@ -38,22 +51,8 @@
             <td onmouseout="onMouseOut(this)" data-cell=8></td>
           </tr>                
         </table>
-        <a onclick="resetGame" href="#">Reset Game</a>
+        <a onclick="resetGame" onmouseup="onNewGamePressed()" href='#'>Reset Game</a>
       </div> 
-      <!-- <aside>
-        <div>
-          <h4>About</h4>
-          <p>This game 
-          </p>
-        </div>
-        <div>
-          <h4>Game Features</h4>
-          <ul>
-            <li>Change the Timer</li>
-            <li>Theme</li>
-          </ul>
-        </div>
-      </aside> -->
     </div>
   </main>
   <footer>

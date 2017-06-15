@@ -1,11 +1,14 @@
 var player1 = 'O',
   player2 = 'X',
+  playerOneName ='',
+  playerTwoName ='',
   theme = '',
   currentPlayer = player1,
   winner = '',
   table = document.querySelector('#table'),
   playerTurn = document.querySelector('#playerTurn'),
-  tableDom = document.getElementsByTagName("td"),
+  tableDom = document.getElementsByTagName('td'),
+  timerSelect = document.querySelector('#timerSelect'),
   cellList = [],
   winCombinations = [
     [0,1,2],
@@ -24,13 +27,16 @@ var halloween = {
 
 var timer = {
   target:document.querySelector('#timer'),
-  seconds:6,
+  timerSelect:0,
+  seconds:0,
   timerId:0,
   updateTime:function(){
     timer.seconds-=1;
     timer.target.textContent = "Timer: " + timer.seconds;
-    if (timer.seconds <= 0) {
+    if (timer.timerSelect != 0 && timer.seconds <= 0) {
       makeRandomMove(currentPlayer);
+      playerTurn.textContent = "Player turn: " + 
+      (currentPlayer == player1 ? playerOneName : playerTwoName);
       timer.reset();
     }
   },
@@ -38,31 +44,74 @@ var timer = {
     console.log("timer start");
     clearInterval(timer.timerId);
     timer.timerId = setInterval(timer.updateTime, 1000);
-    timer.updateTime();  
-    timer.target.textContent = "Timer: " + timer.seconds;
+    //timer.updateTime();  
+    if (timer.timerSelect === 0){
+      timer.target.textContent = "Timer: Disabled";
+    } else {
+      timer.target.textContent = "Timer: " + timer.seconds;
+    }
   },
   reset:function(){
-    timer.seconds=5;
+    timer.seconds=timer.timerSelect;//+1;
     //clearInterval(timer.timerId);
-    timer.target.textContent = "Timer: " + timer.seconds;
+    if (timer.timerSelect === 0){
+      timer.target.textContent = "Timer: Disabled";  
+    } else {
+      timer.target.textContent = "Timer: " + timer.seconds;
+    }
   }
 }  
 
 function initialize(){
-    table.addEventListener('click', onMousePressed);
-    table.addEventListener('mouseover', onMouseOver);
-    playerTurn.textContent = "Player turn: " + currentPlayer;
-    //initialize the timer
-    timer.start();
+  table.addEventListener('click', onMousePressed);
+  table.addEventListener('mouseover', onMouseOver);
+  newGameButton.addEventListener('click', onNewGamePressed);
+  playerTurn.textContent = "Player turn: " + 
+      (currentPlayer == player1 ? playerOneName : playerTwoName);
 
-    for(var i = 0 ; i < 9; i++){
-      var cell = { 
-        number : i,
-        label : ''
-      }
-      cellList.push(cell);
+  for(var i = 0 ; i < 9; i++){
+    var cell = { 
+      number : i,
+      label : ''
     }
+    cellList.push(cell);
   }
+}
+
+function onNewGamePressed(){
+  
+  while( playerOneName === '') {
+    playerOneName = prompt("Enter Player 1 Name.");
+  }
+  while( playerTwoName === '') {
+    playerTwoName = prompt("Enter Player 2 Name.");
+  }
+  playerTurn.textContent = "Player turn: " + 
+      (currentPlayer == player1 ? playerOneName : playerTwoName);
+  resetGame();
+  if (timer.timerSelect != 0){ // there is a timer selected
+    timer.start();  
+  }
+}
+
+function onTimerSelectChanged(){
+  console.log("timer pressed.")
+  var selected = timerSelect.selectedIndex;
+  if (selected === 0 || selected ===1) {
+    timer.timerSelect = 0;
+    timer.seconds=0;
+    clearInterval(timer.timerId);
+  } else if ( selected === 2) {
+    timer.timerSelect = 3;
+  } else if ( selected === 3) {
+    timer.timerSelect = 5;
+  } else if ( selected === 4) {
+    timer.timerSelect = 7;
+  }
+  if (playerOneName != '' && playerTwoName !=''){
+    timer.start();  
+  }
+}
 
 function onMousePressed(event){  
 
@@ -74,14 +123,19 @@ function onMousePressed(event){
       cellPressed.textContent = currentPlayer;
       cellList[cellPressed].label = currentPlayer;
       if (checkWinner(currentPlayer)){
-        alert("Player " + currentPlayer + "wins!");
+        if (currentPlayer === player1){
+          alert("Player 1, " + playerOneName + " wins!");  
+        } else {
+          alert("Player 2, " + playerTwoName + " wins!");  
+        }
         resetGame();
       }
       currentPlayer = (currentPlayer == player1 ? player2 : player1);
       event.target.className = 'unhover';
     }
 
-    playerTurn.textContent = "Player turn: " + currentPlayer;
+    playerTurn.textContent = "Player turn: " + 
+      (currentPlayer == player1 ? playerOneName : playerTwoName);
     timer.reset();
 
   }
@@ -113,10 +167,10 @@ function onMouseOut(target){
 
 function checkWinner(pattern){
   if ( pattern != null){
-    for (var i = 0; i < winCombinations.length-1; i++){
-      if (cellList[winCombinations[i][0]].label === pattern &&
-        cellList[winCombinations[i][1]].label === pattern &&
-        cellList[winCombinations[i][2]].label === pattern){
+    for (var i = 0; i <= winCombinations.length-1; i++){
+      if ((cellList[winCombinations[i][0]].label === pattern) &&
+        (cellList[winCombinations[i][1]].label === pattern) &&
+        (cellList[winCombinations[i][2]].label === pattern)){
         return true;
       } 
     }  
@@ -135,9 +189,18 @@ function makeRandomMove(pattern){
   
   //check if there is a cell for a random move
   if (tempList.length > 0){
+    tableDom[tempList[randomNumber].number].className = 'hover';
     tableDom[tempList[randomNumber].number].textContent = currentPlayer;
+    tableDom[tempList[randomNumber].number].className = 'unhover';
     tempList[randomNumber].label = currentPlayer;
-    checkWinner(currentPlayer);
+    if (checkWinner(currentPlayer)){
+      if (currentPlayer === player1){
+        alert("Player 1, " + playerOneName + " wins!");  
+      } else {
+        alert("Player 2, " + playerTwoName + " wins!");  
+      }
+      resetGame();
+    }
     currentPlayer = (currentPlayer == player1 ? player2 : player1);
   } 
 }

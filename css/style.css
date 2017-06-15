@@ -3,14 +3,35 @@
   font-family: "Verdana", sans-serif;
 }
 
+header > * {
+  text-align: center;
+}
+
 h1 {
-  text-align: left;
+  color: white;
+  font-size: 120px;
+  margin: 40px auto;
+}
+
+nav > * {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+#gameHeader{
+  color:white;
+  padding: 20px 20px 20px 20px;
 }
 
 body {
   width: 1000px;
   margin: 0 auto;
+  background: linear-gradient(to right, #DBE6F6, #C5796D);
+  background-size: cover;
 }
+
+
 
 #playerTurn{
   margin: 5px 0px 5px 25px;
@@ -21,44 +42,38 @@ body {
   margin: 5px 0px 5px 25px;
 }
 
-/*header > ul {
-  background: #838b83;
-  height: 30px;
-  text-align: center;
-  padding: 0px 0px;
-}
-
-header > ul > li {
-  display:inline-block;
-  color: white;
-  width:16.666666%;
-  margin: 5px 5px;
-  cursor: pointer;
-}*/
-
-header > ul > li:hover {
-  display:inline-block;
-  color: white;
-  width:16.666666%;
-  background-color: grey
-}
-
 table {
   border-collapse: separate;
   border-spacing: 10px 10px;
   margin: 0 auto;
 }
 
-td {
-  border: 1px solid black;
+td, .unhover {
+  border: 5px solid #faebd7;
   text-align: center;
-  background-color: linen;
+  background-color: aliceblue;
   width: 150px;
   height: 150px;
   border-radius: 10px;
   min-height: 100px;
   margin: 10px 10px;
-  font-size: 120px;
+  font-size: 100px;
+  color:#8b8378;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.hover {
+  background-color: linen;
+  cursor: pointer;
+  /*border: 5px solid white;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 100px;
+  font-family: "Comic Sans MS", cursive, sans-serif;*/
 }
 
 /*td:hover{
@@ -72,50 +87,13 @@ td {
   margin: 10px 10px;
 }*/
 
-.hover {
-  border: 1px solid black;
-  text-align: center;
-  background-color: plum;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-}
-
-.unhover {
-  border: 1px solid black;
-  text-align: center;
-  background-color: linen;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-}
-
 .wrapper {
-  /*border: 1px solid lime;*/
   margin: 0 auto;
-  /*padding: 10px 10px;*/
   overflow: hidden;
 }
 
 .content {
-  /*border: 1px solid blue;*/
   text-align: center;
-}
-
-/*.wrapper {
-  text-align: center;
-}*/
-
-/*aside{
-  border: 1px solid red;
-  width: 35%;
-  float: left;
-  background-color: #cdb79e;
-}*/
-
-aside > * {
-  padding: 10px 0 10px 20px;
-  color: grey;
 }
 
 .ad {
@@ -124,10 +102,94 @@ aside > * {
 
 a {
   text-align: right;
-  color: #f4a460;
+  color: #C5796D;
+  margin: 40px auto;
 }
 
 a:hover {
-  color: red;
+  color: aliceblue;
 }
 
+/*---------------NORMAL---------------*/
+.normalTable {
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  margin: 0 auto;
+}
+
+.normalTd, .normalHover {
+  border: 1px solid black;
+  text-align: center;
+  background-color: linen;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 120px;
+  color:#8b8378;
+}
+
+.normalUnhover {
+  border: 5px solid white;
+  text-align: center;
+  background-color: aliceblue;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 120px;
+  font-family: 'winter flake';
+}
+/*---------------Winter---------------*/
+
+@font-face
+{
+  font-family: 'winter flake';  /*http://www.fontspace.com/m%C3%A5ns-greb%C3%A4ck/merry-christmas*/
+  src: url('../media/MerryChristmasFlake.ttf'); 
+}
+
+.winterBody{
+  width: 1000px;
+  margin: 0 auto;
+  background: url("file:https://image.freepik.com/free-vector/snowman-on-a-blue-background_1048-3988.jpg");
+  background-repeat: no-repeat;
+}
+
+.winterHeader{
+  text-align: center;
+  color: white;
+  font-family: 'winter flake';
+  font-size: 120px;
+}
+
+.winterGameHeader{
+  padding: 20px 20px;
+}
+
+.winterHover, .winterTd {
+  border: 5px solid white;
+  text-align: center;
+  background-color: mistyrose;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 120px;
+  font-family: 'winter flake';
+}
+
+.winterUnhover {
+  border: 5px solid white;
+  text-align: center;
+  background-color: aliceblue;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 120px;
+  font-family: 'winter flake';
+}
