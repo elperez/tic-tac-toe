@@ -12,21 +12,29 @@ body {
   margin: 0 auto;
 }
 
-#timer{
-  display: block;
+#playerTurn{
+  margin: 5px 0px 5px 25px;
 }
 
-header > ul {
+#timer{
+  display: block;
+  margin: 5px 0px 5px 25px;
+}
+
+/*header > ul {
   background: #838b83;
   height: 30px;
   text-align: center;
+  padding: 0px 0px;
 }
 
 header > ul > li {
   display:inline-block;
   color: white;
   width:16.666666%;
-}
+  margin: 5px 5px;
+  cursor: pointer;
+}*/
 
 header > ul > li:hover {
   display:inline-block;
@@ -38,17 +46,19 @@ header > ul > li:hover {
 table {
   border-collapse: separate;
   border-spacing: 10px 10px;
+  margin: 0 auto;
 }
 
 td {
   border: 1px solid black;
   text-align: center;
   background-color: linen;
-  width: 216.66666px;
-  height: 216.66666px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
   min-height: 100px;
   margin: 10px 10px;
+  font-size: 120px;
 }
 
 /*td:hover{
@@ -66,8 +76,6 @@ td {
   border: 1px solid black;
   text-align: center;
   background-color: plum;
-  width: 216.66666px;
-  height: 216.66666px;
   border-radius: 10px;
   min-height: 100px;
   margin: 10px 10px;
@@ -77,8 +85,6 @@ td {
   border: 1px solid black;
   text-align: center;
   background-color: linen;
-  width: 216.66666px;
-  height: 216.66666px;
   border-radius: 10px;
   min-height: 100px;
   margin: 10px 10px;
@@ -93,40 +99,35 @@ td {
 
 .content {
   /*border: 1px solid blue;*/
-  width: 65%;
-  float: left;
+  text-align: center;
 }
 
-aside{
-  /*border: 1px solid red;*/
+/*.wrapper {
+  text-align: center;
+}*/
+
+/*aside{
+  border: 1px solid red;
   width: 35%;
   float: left;
-}
+  background-color: #cdb79e;
+}*/
 
 aside > * {
   padding: 10px 0 10px 20px;
+  color: grey;
 }
 
 .ad {
   width: 320px;
 }
 
-
-
 a {
   text-align: right;
+  color: #f4a460;
+}
+
+a:hover {
   color: red;
 }
 
-footer{
-  clear: both;
-}
-
-footer > * {
-  text-align: left;
-  padding:0 0;
-}
-
-footer > ul > li {
-  display:inline-block;
-}
