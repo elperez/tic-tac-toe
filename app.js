@@ -106,12 +106,12 @@ function onThemeChanged(){
   var selected = themeSelect.selectedIndex;
   if (selected === 0 || selected ===1) { //pastels
     var link = document.querySelector('link');
-    link.href="file:///Users/kit.perez/wdi/my_repo/tic-tac-toe/css/style-pastels.css"; 
+    link.href="css/style-pastels.css"; 
     playerOneSound = new Audio('media/pastelPlayerOneSound.wav');
     playerTwoSound = new Audio('media/pastelPlayerTwoSound.wav');
   } else if ( selected === 2) { //winter
     var link = document.querySelector('link');
-    link.href="file:///Users/kit.perez/wdi/my_repo/tic-tac-toe/css/style-winter.css"; 
+    link.href="css/style-winter.css"; 
     playerOneSound = new Audio('media/ice-block-drop-01.wav');
     playerTwoSound = new Audio('media/ice-block-drop-02.wav');
   } 

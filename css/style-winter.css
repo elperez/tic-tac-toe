@@ -59,7 +59,7 @@ td, .unhover {
   border: 5px solid #4682b4;
   text-align: center;
   background-color: aliceblue;
-  background-image:url("file:///Users/kit.perez/wdi/my_repo/tic-tac-toe/media/snow.png");
+  background-image:url("media/snow.png");
   width: 150px;
   height: 150px;
   border-radius: 10px;
