@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Verdana", sans-serif;
+}
+
+header > * {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'winter flake';
+  font-size: 150px;
+  margin: 40px auto;
+}
+
+nav > * {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+#gameHeader {
+  padding: 10px 5px;
+}
+
+#gameHeader > *{
+  display:block;
+  color:navy;
+  font-size: 20px;
+  padding: 5px 5px;
+  font-family: 'Rosecube';
+  margin: 5px auto;
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background: url("https://image.freepik.com/free-vector/snowman-on-a-blue-background_1048-3988.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /*-webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;*/
+  /*animation: snow 20s linear infinite;*/
+}
+
+#timer{
+  display: block; 
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  margin: 0 auto;
+}
+
+td, .unhover {
+  border: 5px solid #4682b4;
+  text-align: center;
+  background-color: aliceblue;
+  background-image:url("file:///Users/kit.perez/wdi/my_repo/tic-tac-toe/media/snow.png");
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 100px;
+  font-family: 'winter flake';
+  color: navy;
+}
+
+.hover {
+  border: 5px dashed #b0c4de;
+  text-align: center;
+  background-color: mistyrose;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  min-height: 100px;
+  margin: 10px 10px;
+  font-size: 120px;
+  font-family: 'winter flake';
+  cursor:pointer;
+  color: #afeeee;
+}
+
+.wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+}
+
+.ad {
+  width: 320px;
+}
+
+a {
+  text-align: right;
+  color: navy;
+  margin: 40px auto;
+}
+
+a:hover {
+  color: #C5796D;
+}
+
+@font-face
+{
+  font-family: 'winter flake';  /*http://www.fontspace.com/m%C3%A5ns-greb%C3%A4ck/merry-christmas*/
+  src: url('../media/MerryChristmasFlake.ttf'); 
+}
+
+/*=========SNOW from: http://bradsknutson.com/blog/css-snow-effect/=========*/
+@-webkit-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    50% { background-color: #b4cfe0 }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+@-moz-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    50% { background-color: #b4cfe0 }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+@-ms-keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    50% { background-color: #b4cfe0 }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+@keyframes snow {
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+    50% { background-color: #b4cfe0 }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+
