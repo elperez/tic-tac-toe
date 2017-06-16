@@ -11,6 +11,7 @@ var player1 = 'O',
   playerTurn = document.querySelector('#playerTurn'),
   tableDom = document.getElementsByTagName('td'),
   timerSelect = document.querySelector('#timerSelect'),
+  title = document.querySelector('#title'),
   cellList = [],
   winCombinations = [
     [0,1,2],
@@ -109,11 +110,13 @@ function onThemeChanged(){
     link.href="css/style-pastels.css"; 
     playerOneSound = new Audio('media/pastelPlayerOneSound.wav');
     playerTwoSound = new Audio('media/pastelPlayerTwoSound.wav');
+    title.textContent = "+Tic-Tac-Toe+";
   } else if ( selected === 2) { //winter
     var link = document.querySelector('link');
     link.href="css/style-winter.css"; 
     playerOneSound = new Audio('media/ice-block-drop-01.wav');
     playerTwoSound = new Audio('media/ice-block-drop-02.wav');
+    title.textContent = "+*##Tic1Tac1Toe##*+";
   } 
 }
 

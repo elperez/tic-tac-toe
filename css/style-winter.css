@@ -37,7 +37,8 @@ nav > * {
 body {
   width: 1000px;
   margin: 0 auto;
-  background: url("https://image.freepik.com/free-vector/snowman-on-a-blue-background_1048-3988.jpg") no-repeat center center fixed;
+  /*background: url("https://image.freepik.com/free-vector/snowman-on-a-blue-background_1048-3988.jpg") no-repeat center center fixed;*/
+  background: url("../media/snowmanBackground.jpg") no-repeat center center fixed;
   background-size: cover;
   /*-webkit-animation: snow 20s linear infinite;
   -moz-animation: snow 20s linear infinite;
@@ -56,7 +57,7 @@ table {
 }
 
 td, .unhover {
-  border: 5px solid #4682b4;
+  border: 5px solid #6495ed;
   text-align: center;
   background-color: aliceblue;
   background-image:url("media/snow.png");
@@ -71,7 +72,7 @@ td, .unhover {
 }
 
 .hover {
-  border: 5px dashed #b0c4de;
+  border: 5px dashed #add8e6;
   text-align: center;
   background-color: mistyrose;
   width: 150px;
