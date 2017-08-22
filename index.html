@@ -4,6 +4,7 @@
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" type="text/css" href="css/style-pastels.css">
   <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <audio src="/music/good_enough.mp3"></audio>
 </head>
 <body>
@@ -30,7 +31,7 @@
       <div id="content" class="content">
         <div id='gameHeader'>
           <span id='playerTurn'>Player turn:</span>
-          <span id='timer'>Timer: </span>          
+          <span id='timer'>Timer: </span>
         </div>
         <table id='table'>
           <tr>
@@ -47,10 +48,10 @@
             <td onmouseout="onMouseOut(this)" data-cell=6></td>
             <td onmouseout="onMouseOut(this)" data-cell=7></td>
             <td onmouseout="onMouseOut(this)" data-cell=8></td>
-          </tr>                
+          </tr>
         </table>
         <a onclick="resetGame" onmouseup="onNewGamePressed()" href='#'>Reset Game</a>
-      </div> 
+      </div>
     </div>
   </main>
   <footer>

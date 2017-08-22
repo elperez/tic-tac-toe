@@ -23,17 +23,6 @@ var player1 = 'O',
     [1,4,7],
     [2,5,8]];
 
-var theme = {
-  themeSelect : 0,
-  winter : {
-    background: 'winterBody',
-    table: 'winterTable',
-    header: 'winterHeader',
-    gameHeader: 'winterGameHeader'
-  }
-}
-
-
 var timer = {
   target:document.querySelector('#timer'),
   timerSelect:0,
@@ -50,7 +39,7 @@ var timer = {
     }
   },
   start:function(){
-    console.log("timer start");
+
     clearInterval(timer.timerId);
     timer.timerId = setInterval(timer.updateTime, 1000);
     //timer.updateTime();  
@@ -144,8 +133,6 @@ function onMousePressed(event){
   var cellPressed = event.target.getAttribute('data-cell');
   if (cellPressed != null){
     if (cellList[cellPressed].label === '') { 
-      console.log('parent, child name: ' + event.target.tagName);                       
-      console.log(event.target.textContent);
       cellPressed.textContent = currentPlayer;
       cellList[cellPressed].label = currentPlayer;
       if (currentPlayer==='O'){
@@ -178,8 +165,6 @@ function onMouseOver(event){
   var cellOver = event.target.getAttribute('data-cell');
   if (cellOver != null ){
     if (cellList[cellOver].label === '') {
-      console.log('parent, child name: ' + event.target.tagName);                       
-      console.log(event.target.textContent);
       event.target.className = 'hover';
       event.target.textContent = currentPlayer;
     }
