@@ -65,27 +65,7 @@ td, .unhover {
 .hover {
   background-color: linen;
   cursor: pointer;
-  /*border: 5px solid white;
-  text-align: center;
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-  font-size: 100px;
-  font-family: "Comic Sans MS", cursive, sans-serif;*/
 }
-
-/*td:hover{
-  border: 1px solid black;
-  text-align: center;
-  background-color: plum;
-  width: 216.66666px;
-  height: 216.66666px;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-}*/
 
 .wrapper {
   margin: 0 auto;
@@ -131,57 +111,6 @@ a:hover {
 }
 
 .normalUnhover {
-  border: 5px solid white;
-  text-align: center;
-  background-color: aliceblue;
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-  font-size: 120px;
-  font-family: 'winter flake';
-}
-/*---------------Winter---------------*/
-
-@font-face
-{
-  font-family: 'winter flake';  /*http://www.fontspace.com/m%C3%A5ns-greb%C3%A4ck/merry-christmas*/
-  src: url('../media/MerryChristmasFlake.ttf'); 
-}
-
-.winterBody{
-  width: 1000px;
-  margin: 0 auto;
-  background: url("file:https://image.freepik.com/free-vector/snowman-on-a-blue-background_1048-3988.jpg");
-  background-repeat: no-repeat;
-}
-
-.winterHeader{
-  text-align: center;
-  color: white;
-  font-family: 'winter flake';
-  font-size: 120px;
-}
-
-.winterGameHeader{
-  padding: 20px 20px;
-}
-
-.winterHover, .winterTd {
-  border: 5px solid white;
-  text-align: center;
-  background-color: mistyrose;
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 10px 10px;
-  font-size: 120px;
-  font-family: 'winter flake';
-}
-
-.winterUnhover {
   border: 5px solid white;
   text-align: center;
   background-color: aliceblue;
